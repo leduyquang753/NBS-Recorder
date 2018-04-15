@@ -1,0 +1,16 @@
+[
+{
+  "modid": "nbsrecorder",
+  "name": "NBS Recorder",
+  "description": "Records note block songs and save them as NBS files!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["leduyquang753"],
+  "credits": "Le Duy Quang ground his brain for something awesome!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
