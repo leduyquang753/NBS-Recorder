@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
 public class Events {
 	Minecraft mc = Minecraft.getMinecraft();
-	String[] notes = {"note.harp", "note.bassattack", "note.bd", "note.snare", "note.hat"};
 	
 	private static String getTimeString(int dur) {
 		int duration = dur-1;

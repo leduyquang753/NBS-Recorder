@@ -9,6 +9,18 @@ import cf.leduyquang753.nbsapi.Layer;
 import cf.leduyquang753.nbsapi.Note;
 
 public class Utils {
+	private static String[] notes = {
+			"note.harp",
+			"note.bassattack",
+			"note.bd",
+			"note.snare",
+			"note.hat",
+			"note.flute",
+			"note.guitar",
+			"note.basedrum",
+			"note.bell",
+			"note.chime",
+			"note.xylophone"};
 	public static int div = 4;
 	public static boolean sort = true;
 	public static Comparator<RecordedNote> comp = (n1, n2) -> new Integer(getPitch(n2.getPitch())).compareTo(new Integer(getPitch(n1.getPitch())));
@@ -16,19 +28,20 @@ public class Utils {
 	public static Instrument getInstrument(String name) {
 		switch (name) {
 		case "note.bassattack": return Instrument.BASS;
-		case "note.bd": return Instrument.DRUM;
+		case "note.bd": case "note.basedrum": return Instrument.DRUM;
 		case "note.snare": return Instrument.SNARE;
 		case "note.hat": return Instrument.CLICK;
+		case "note.guitar": return Instrument.GUITAR;
+		case "note.flute": return Instrument.FLUTE;
+		case "note.bell": return Instrument.BELL;
+		case "note.chime": return Instrument.CHIME;
+		case "note.xylophone": return Instrument.XYLOPHONE;
 		}
 		return Instrument.HARP;
 	}
 	
 	public static boolean isNote(String name) {
-		if (name.equalsIgnoreCase("note.bassattack")) return true;
-		if (name.equalsIgnoreCase("note.bd")) return true;
-		if (name.equalsIgnoreCase("note.snare")) return true;
-		if (name.equalsIgnoreCase("note.hat")) return true;
-		if (name.equalsIgnoreCase("note.harp")) return true;
+		for (String i : notes) if (i.equalsIgnoreCase(name)) return true;
 		return false;
 	}
 	

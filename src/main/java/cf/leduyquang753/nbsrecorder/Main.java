@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-@Mod(modid = "nbsrecorder", name = "NBS Recorder", version = "0.3")
+@Mod(modid = "nbsrecorder", name = "NBS Recorder", version = "0.3.1")
 public class Main {
 	public static boolean recording = false;
 	public static boolean saving = false;
