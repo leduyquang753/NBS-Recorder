@@ -1,0 +1,7 @@
+{
+	"homepage": "http://raw.githubusercontent.com/leduyquang753/NBS-Recorder/releases",
+	"[1.8, 1.12.2]": {
+		"0.3": "First public prototype.",
+		"0.3.1": "Added 1.12 noteblocks."
+	}
+}

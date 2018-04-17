@@ -10,7 +10,6 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
-		classpath ':proguard:'
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
@@ -83,27 +82,3 @@ processResources
         exclude 'mcmod.info'
     }
 }
-
-task obfuscate(type: proguard.gradle.ProGuardTask) {
-  injars "./build/libs/nbsrecorder-0.3.jar"
-  outjars "./build/libs/nbsrecorder-0.3-obf.jar"
-
-  libraryjars "${System.getProperty('java.home')}/lib/rt.jar"
-
-  dontwarn
-  overloadaggressively
-  repackageclasses 'foo'
-  printmapping "./build/libs/nbsrecorder.map"
-
-  keep 'class !foo.bar.buz**,!foo.bar.baz.** { *; }'
-
-  keepclasseswithmembers "public class Main { \
-    public static void main(java.lang.String[]); \
-  }"
-
-  keepclassmembers allowshrinking:true, 'enum * { \
-    public static **[] values(); \
-    static boolean contains(java.lang.String); \
-  }'
-
-} 
